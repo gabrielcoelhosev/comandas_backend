@@ -1,3 +1,5 @@
+# Gabriel Coelho Severino
+
 from fastapi import FastAPI
 from settings import HOST, PORT, RELOAD
 import uvicorn
