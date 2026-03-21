@@ -1,5 +1,5 @@
 # Gabriel Coelho Severino
-
+ 
 from fastapi import APIRouter
 from domain.entities.Funcionario import Funcionario
 
