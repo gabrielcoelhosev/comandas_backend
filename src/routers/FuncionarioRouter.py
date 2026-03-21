@@ -1,7 +1,7 @@
 # Gabriel Coelho Severino
 
 from fastapi import APIRouter
-from src.domain.entities.Funcionario import Funcionario
+from domain.entities.Funcionario import Funcionario
 
 router = APIRouter()
 
