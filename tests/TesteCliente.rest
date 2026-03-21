@@ -1,0 +1,28 @@
+### Listar todos os clientes
+GET http://localhost:8000/cliente HTTP/1.1
+
+### Listar um cliente específico
+GET http://localhost:8000/cliente/1 HTTP/1.1
+
+### Cadastrar um cliente
+POST http://localhost:8000/cliente HTTP/1.1
+Content-Type: application/json
+
+{
+    "nome": "Maria",
+    "cpf": "555.666.777-88",
+    "telefone": "11988888888"
+}
+
+### Atualizar um cliente
+PUT http://localhost:8000/cliente/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "nome": "Maria Silva",
+    "cpf": "555.666.777-88",
+    "telefone": "11988888888"
+}
+
+### Deletar um cliente
+DELETE http://localhost:8000/cliente/1 HTTP/1.1
