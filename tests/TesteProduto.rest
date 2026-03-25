@@ -31,4 +31,4 @@ Content-Type: application/json
 }
 
 ### Deletar um produto
-DELETE http://localhost:8000/produto/1 HTTP/1.1
+DELETE http://localhost:8000/produto/5 HTTP/1.1

@@ -116,7 +116,7 @@ async def delete_cliente(id: int, db: Session = Depends(get_db)):
             )
         db.delete(cliente)
         db.commit()
-        return None
+        return "Cliente removido com sucesso"
     except HTTPException:
         raise
     except Exception as e:
