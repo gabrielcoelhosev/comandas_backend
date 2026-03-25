@@ -11,7 +11,7 @@ POST http://localhost:8000/funcionario HTTP/1.1
 Content-Type: application/json
 
 {
-    "nome": "João",
+    "nome": "Gabriel",
     "matricula": "123456",
     "cpf": "111.222.333-44",
     "telefone": "11999999999",
@@ -24,7 +24,7 @@ PUT http://localhost:8000/funcionario/1 HTTP/1.1
 Content-Type: application/json
 
 {
-    "nome": "João Silva",
+    "nome": "Gabriel Coelho",
     "matricula": "123456",
     "cpf": "111.222.333-44",
     "telefone": "11999999999",

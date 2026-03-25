@@ -11,7 +11,7 @@ POST http://localhost:8000/cliente HTTP/1.1
 Content-Type: application/json
 
 {
-    "nome": "Maria",
+    "nome": "Gabriel",
     "cpf": "555.666.777-88",
     "telefone": "11988888888"
 }
@@ -21,7 +21,7 @@ PUT http://localhost:8000/cliente/1 HTTP/1.1
 Content-Type: application/json
 
 {
-    "nome": "Maria Silva",
+    "nome": "Maria Coelho",
     "cpf": "555.666.777-88",
     "telefone": "11988888888"
 }
