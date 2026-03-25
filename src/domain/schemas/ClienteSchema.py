@@ -1,9 +1,7 @@
-# Gabriel Coelho Severino
-
 from pydantic import BaseModel, ConfigDict
 from typing import Optional
 
-class Cliente(BaseModel):
+class ClienteCreate(BaseModel):
     nome: str
     cpf: str
     telefone: str

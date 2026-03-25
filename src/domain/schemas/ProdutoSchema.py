@@ -1,12 +1,10 @@
-# Gabriel Coelho Severino
-
 from pydantic import BaseModel, ConfigDict
 from typing import Optional
 
-class Produto(BaseModel):
+class ProdutoCreate(BaseModel):
     nome: str
     descricao: str
-    foto: bytes
+    foto: bytes = None
     valor_unitario: float
 
 class ProdutoUpdate(BaseModel):
