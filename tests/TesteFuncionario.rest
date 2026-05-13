@@ -1,36 +1,44 @@
 # Gabriel Coelho Severino
-
-### Listar todos os funcionários
+### Verbo GET – listar todos
 GET http://localhost:8000/funcionario/ HTTP/1.1
+### Verbo GET – listar um
+GET http://localhost:8000/funcionario/10 HTTP/1.1
+### Verbo POST – adicionar
+POST http://127.0.0.1:8000/funcionario/ HTTP/1.1
+content-type: application/json
 
-### Listar um funcionário específico
-GET http://localhost:8000/funcinario/1 HTTP/1.1
+### listar todos com filtro
+GET http://localhost:8000/funcionario/?skip=0&limit=100&id=1&nome=ze&matricula=123&cpf=1&grupo=2%2C1&telefone=49 HTTP/1.1
+Authorization: Bearer {{access_token}}
 
-### Cadastrar um funcionário
-POST http://localhost:8000/funcionario HTTP/1.1
-Content-Type: application/json
+### listar todos com paginação - página 1
+GET http://localhost:8000/funcionario/?skip=0&limit=3 HTTP/1.1
+Authorization: Bearer {{access_token}}
 
-{
-    "nome": "João",
-    "matricula": "123456",
-    "cpf": "111.222.333-44",
-    "telefone": "11999999999",
-    "grupo": 1,
-    "senha": "senha_segura"
-}
-
-### Atualizar um funcionário
-PUT http://localhost:8000/funcionario/1 HTTP/1.1
-Content-Type: application/json
+### listar todos com paginação - página 2
+GET http://localhost:8000/funcionario/?skip=3&limit=3 HTTP/1.1
+Authorization: Bearer {{access_token}}
 
 {
-    "nome": "João Silva",
-    "matricula": "123456",
-    "cpf": "111.222.333-44",
-    "telefone": "11999999999",
-    "grupo": 2,
-    "senha": "nova_senha_segura"
+    "nome" : "Gabriel",
+    "matricula" : "152087",
+    "cpf" : "1",
+    "telefone" : "11987654321",
+    "grupo" : 1,
+    "senha" : "123"
 }
 
-### Deletar um funcionário
-DELETE http://localhost:8000/funcionario/1 HTTP/1.1
+### Verbo PUT – atualiza
+PUT http://127.0.0.1:8000/funcionario/2 HTTP/1.1
+content-type: application/json
+
+{
+    "nome" : "Gabriel",
+    "matricula" : "152087",
+    "cpf" : "1",
+    "telefone" : "11987654321",
+    "grupo" : 1,
+    "senha" : "321"
+}
+### Verbo DELETE - excluir
+DELETE http://127.0.0.1:8000/funcionario/3 HTTP/1.1

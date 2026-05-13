@@ -1,34 +1,28 @@
 # Gabriel Coelho Severino
-
-### Listar todos os produtos
-GET http://localhost:8000/produto HTTP/1.1
-
-### Listar um produto específico
-GET http://localhost:8000/produto/1 HTTP/1.1
-
-### Cadastrar um produto
-POST http://localhost:8000/produto HTTP/1.1
-Content-Type: application/json
+### Verbo GET – listar todos
+GET http://localhost:8000/produto/ HTTP/1.1
+### Verbo GET – listar um
+GET http://localhost:8000/produto/10 HTTP/1.1
+### Verbo POST – adicionar
+POST http://127.0.0.1:8000/produto/ HTTP/1.1
+content-type: application/json
 
 {
-    "id_produto": 1,
-    "nome": "Pastel de Carne",
-    "descricao": "Delicioso pastel recheado com carne moída",
-    "foto": "cGFzdGVs",
-    "valor_unitario": 8.50
+    "nome" : "Gabriel",
+    "descricao" : "azul",
+    "preco" : 10.0,
+    "foto" : null
 }
 
-### Atualizar um produto
-PUT http://localhost:8000/produto/1 HTTP/1.1
-Content-Type: application/json
+### Verbo PUT – atualiza
+PUT http://127.0.0.1:8000/produto/2 HTTP/1.1
+content-type: application/json
 
 {
-    "id_produto": 1,
-    "nome": "Pastel de Queijo",
-    "descricao": "Delicioso pastel recheado com muito queijo",
-    "foto": "cGFzdGVs",
-    "valor_unitario": 8.00
+    "nome" : "Gabriel",
+    "descricao" : "vermelho",
+    "preco" : 11.0,
+    "foto" : null
 }
-
-### Deletar um produto
-DELETE http://localhost:8000/produto/1 HTTP/1.1
+### Verbo DELETE - excluir
+DELETE http://127.0.0.1:8000/produto/3 HTTP/1.1
