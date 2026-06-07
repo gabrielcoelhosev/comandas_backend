@@ -1,11 +1,13 @@
 #Gabriel Coelho Severino
-from pydantic import BaseModel, ConfigDict
+import base64
+
+from pydantic import BaseModel, ConfigDict, field_serializer
 from typing import Optional
 
 class ProdutoCreate(BaseModel):
     nome: str
     descricao: str
-    foto: bytes = None
+    foto: Optional[bytes] = None
     valor_unitario: float
 
 class ProdutoUpdate(BaseModel):
@@ -19,5 +21,12 @@ class ProdutoResponse(BaseModel):
     id: int
     nome: str
     descricao: str
-    foto: bytes
+    foto: Optional[bytes] = None
     valor_unitario: float
+
+    @field_serializer('foto')
+    def serialize_foto(self, foto: Optional[bytes]):
+        if foto is None:
+            return None
+
+        return f"data:image/png;base64,{base64.b64encode(foto).decode('ascii')}"

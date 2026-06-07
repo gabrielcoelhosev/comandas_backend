@@ -1,0 +1,13 @@
+{
+  "name": "comandas_backend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "docker compose -f compose.yml up --build",
+    "dev:local": "cd src && ..\\venv\\Scripts\\python.exe -m uvicorn main:app --reload --host 127.0.0.1 --port 8000",
+    "start": "cd src && ..\\venv\\Scripts\\python.exe main.py",
+    "install:py": ".\\venv\\Scripts\\python.exe -m pip install -r requirements.txt",
+    "docker:dev": "docker compose -f compose.yml up --build",
+    "docker:down": "docker compose -f compose.yml down"
+  }
+}
